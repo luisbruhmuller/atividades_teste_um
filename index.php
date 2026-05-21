@@ -9,8 +9,16 @@ $db = 'sistema_simples3';
 $conn = new mysqli($host, $user, $pass, $db);
 if ($conn->connect_error) {
     die("Conexão falhou: " . $conn->connect_error);
+}else{
+    echo "<script>console.log('conexão bem sucedida');</script>";
 }
 
+if($_SERVER["REQUEST_METHOD"] == "POST"){
+    $usuario = $_POST['usuario'];
+    $senha = $_POST['senha'];
+
+    
+}
 ?>
 
 <html lang="en">
