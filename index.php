@@ -1,3 +1,18 @@
+<?php
+session_start();
+
+$host = 'localhost';
+$user = 'root';
+$pass = 'root';
+$db = 'sistema_simples3';
+
+$conn = new mysqli($host, $user, $pass, $db);
+if ($conn->connect_error) {
+    die("Conexão falhou: " . $conn->connect_error);
+}
+
+?>
+
 <html lang="en">
 
 <head>
@@ -16,6 +31,7 @@
         <br>
         <label for="senha">senha</label>
         <input type="password" name="senha">
+        <br>
         <button type="submit">entrar</button>
     </form>
 </body>
