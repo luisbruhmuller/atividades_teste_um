@@ -1,12 +1,12 @@
 <?php
-
+// Conexão com o banco de dados
     $host = "localhost";
     $user = "root";
     $pass = "root";
     $db = "sistema_simples_m1";
 
     $conn = new mysqli($host,$user,$pass,$db);
-
+// Verificar se a conexão foi bem sucedida
     if($conn->connect_error){
         die("Erro na conexão!");
     }else{

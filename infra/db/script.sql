@@ -1,3 +1,4 @@
+-- Script para criação do banco de dados e tabela de usuários, além de inserir um usuário padrão para teste.
 CREATE DATABASE sistema_simples_m1;
 
 USE sistema_simples_m1;

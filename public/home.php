@@ -1,12 +1,14 @@
 <?php
+// Página de Home, onde o usuário pode cadastrar novos usuários e visualizar a tabela de usuários cadastrados.
+// Acessível apenas para usuários logados.
 session_start();
 if(!isset($_SESSION["usuario"])){
     header("Location: ../index.php");
     exit();
 }
-
+// Inclusão do arquivo de conexão com o banco de dados
 include("../infra/db/connect.php");
-
+// Lógica para cadastro de novo usuário
 if($_SERVER["REQUEST_METHOD"] == "POST"){
     $novoUsuario = $_POST['usuario'];
     $novaSenha = $_POST['senha'];
@@ -23,7 +25,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 };
 
 ?>
-
+<!-- Página Home -->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -55,11 +57,11 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     </form>
     <hr>
     <?php
-    
+    // Inclusão do arquivo que exibe a tabela de usuários cadastrados
     include("components/table.php")
 
     ?>
-
+    
 
 
 </body>
